@@ -27,7 +27,7 @@ public class Server {
 	}
   
   private static String getStrategy(String[] args) { 
-    if (args == null) {
+    if (args.length == 0) {
       return "flames";
     }
     
