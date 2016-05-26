@@ -5,16 +5,12 @@
 //-- have been already checked by InputValidator class 
 
 public class TrueLoveCalculator implements LoveComputer {
-	String name1;
-	String name2;
 	
-	public TrueLoveCalculator (String name1, String name2) {
-		this.name1 = name1;
-		this.name2 = name2;
+	public TrueLoveCalculator () {
 	}
 	
 	@Override
-	public String compute() {
+	public String compute(String name1, String name2) {
 		String combinedName = name1 + name2;
 		
 		CountNumberOfLettersOccurences countTrue = new CountNumberOfLettersOccurences("true", combinedName);

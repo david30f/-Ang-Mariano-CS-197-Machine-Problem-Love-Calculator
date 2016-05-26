@@ -5,17 +5,13 @@
 //-- have been already checked by InputValidator class  
 
 public class FlamesCalculator implements LoveComputer {
-	String name1;
-	String name2;
-	final String [] flamesRelationship = {"S = Sibling", "F = Friendship", "L = Love", "A = Affection", "M = Marriage", "E = Enemy"};
+	final String [] flamesRelationship = {"S: Sibling", "F: Friendship", "L: Love", "A: Affection", "M: Marriage", "E: Enemy"};
 	
-	public FlamesCalculator (String name1, String name2) {
-		this.name1 = name1;
-		this.name2 = name2;
+	public FlamesCalculator () {
 	}
 	
 	@Override
-	public String compute () {
+	public String compute (String name1, String name2) {
 		RemoveSameLetters remover = new RemoveSameLetters(name1, name2);
 		String [] removedLettersString = remover.remove(); 
 		String combinedString = removedLettersString[0] + removedLettersString[1];
