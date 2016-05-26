@@ -14,7 +14,7 @@ public class TrueLoveCalculator implements LoveComputer {
 	}
 	
 	@Override
-	public void compute() {
+	public String compute() {
 		String combinedName = name1 + name2;
 		
 		CountNumberOfLettersOccurences countTrue = new CountNumberOfLettersOccurences("true", combinedName);
@@ -25,7 +25,7 @@ public class TrueLoveCalculator implements LoveComputer {
 		int secondDigitsInt = countLove.count();
 		String secondDigitsString = String.valueOf(secondDigitsInt);
 		
-		String overallPercent = firstDigitsString + secondDigitsString;
-		System.out.println("TRUELOVE RESULT: " + overallPercent + "%");
+		String overallPercent = firstDigitsString + secondDigitsString + "%";
+    return overallPercent;
 	}
 }

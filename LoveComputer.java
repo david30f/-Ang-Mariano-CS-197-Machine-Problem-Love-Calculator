@@ -1,3 +1,3 @@
 public interface LoveComputer {
-	public void compute();
+	public String compute();
 }

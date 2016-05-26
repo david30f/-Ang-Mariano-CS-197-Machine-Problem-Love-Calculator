@@ -15,15 +15,16 @@ public class FlamesCalculator implements LoveComputer {
 	}
 	
 	@Override
-	public void compute () {
+	public String compute () {
 		RemoveSameLetters remover = new RemoveSameLetters(name1, name2);
 		String [] removedLettersString = remover.remove(); 
 		String combinedString = removedLettersString[0] + removedLettersString[1];
+    
 		int combinedStringLength = combinedString.length();
 		int numberOfLettersOfFlames = flamesRelationship.length;
-		int modOfcombinedStringLength = combinedStringLength % numberOfLettersOfFlames;		
+		int modOfcombinedStringLength = combinedStringLength % numberOfLettersOfFlames;	
+    
 		String returnValue = flamesRelationship[modOfcombinedStringLength]; 
-		
-		System.out.println("FLAMES RESULT: " + returnValue);
+		return returnValue;
 	}
 }
