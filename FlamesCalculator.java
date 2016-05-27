@@ -27,7 +27,6 @@ public class FlamesCalculator implements LoveComputer {
     int position = 0;
     while(flames.size() > 1) {
       int positionToRemove = (flamesCount + position - 1) % flames.size();
-      System.out.println(positionToRemove);
       flames.remove(positionToRemove);
       position = positionToRemove % flames.size();
     }
