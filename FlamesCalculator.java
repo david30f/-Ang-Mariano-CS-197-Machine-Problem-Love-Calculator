@@ -1,9 +1,3 @@
-//DELETE BEFORE SUBMITTING: this class assumes that name1 and name2:
-//-- have no spaces
-//-- letters are all in lowercase
-//-- have no symbols or numbers
-//-- have been already checked by InputValidator class  
-
 public class FlamesCalculator implements LoveComputer {
 	final String [] flamesRelationship = {"S: Sibling", "F: Friendship", "L: Love", "A: Affection", "M: Marriage", "E: Enemy"};
 	
