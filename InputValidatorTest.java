@@ -35,6 +35,11 @@ public class InputValidatorTest {
   }
   
   @Test
+  public void testSameNames() {
+    assertFalse(iv.isValid("alex,alex"));
+  }
+  
+  @Test
   public void testFirstNameWithNumber() {
     assertFalse(iv.isValid("alice4,bob"));
   }
