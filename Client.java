@@ -11,20 +11,15 @@ public class Client {
 			Socket s = new Socket(ip, 8888);	
 			Connection connection = new Connection(s);
 			System.out.println("C: Connected.");
-			while (true) {
-				String msg = promptMessage();
-				if (!connection.sendMessage(msg)) {
-					System.out.println(ERROR_MESSAGE);
-				}
-				String response = connection.getMessage();
-				if (response.equals(Server.ERROR_MESSAGE)) {
-					throw new Exception();
-				}
-				System.out.println("S: " + response);
-				if (response.equals("Goodbye")) {
-					break;
-				}
-			}
+      String msg = promptMessage();
+      if (!connection.sendMessage(msg)) {
+        System.out.println(ERROR_MESSAGE);
+      }
+      String response = connection.getMessage();
+      if (response.equals(Server.ERROR_MESSAGE)) {
+        throw new Exception();
+      }
+      System.out.println("S: " + response);
 		}
 		catch (Exception e) {
 			System.out.println(ERROR_MESSAGE);
