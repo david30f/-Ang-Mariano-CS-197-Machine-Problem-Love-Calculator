@@ -4,8 +4,7 @@ import java.util.ArrayList;
 public class FlamesCalculator implements LoveComputer {
   
   ArrayList<String> flames;
-	final String [] flamesRelationship = {"F: Friendship", "L: Love", "A: Affection", "M: Marriage", "E: Enemy", "S: Sibling"};
-	
+
 	public FlamesCalculator () {
     flames = new ArrayList();
     flames.add("Friendship");
@@ -24,7 +23,7 @@ public class FlamesCalculator implements LoveComputer {
     System.out.println(combinedString);
     
 		int flamesCount = combinedString.length();
-                
+               
     int position = 0;
     while(flames.size() > 1) {
       int positionToRemove = (flamesCount + position - 1) % flames.size();
