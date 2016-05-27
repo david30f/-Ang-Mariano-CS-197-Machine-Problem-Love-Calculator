@@ -20,7 +20,6 @@ public class FlamesCalculator implements LoveComputer {
 		RemoveSameLetters remover = new RemoveSameLetters(name1, name2);
 		String [] removedLettersString = remover.remove(); 
 		String combinedString = removedLettersString[0] + removedLettersString[1];
-    System.out.println(combinedString);
     
 		int flamesCount = combinedString.length();
                
