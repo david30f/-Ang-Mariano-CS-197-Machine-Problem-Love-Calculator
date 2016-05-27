@@ -14,10 +14,10 @@ public class ServerRunnable implements Runnable {
 	public ServerRunnable(Socket socket, String strat) {
 		s = socket;
     
-    if (strat.equals("truelove")) {
+    if (strat.equals("TRUE LOVE")) {
       compatibilityStrategy = new TrueLoveCalculator();
     }
-    else if (strat.equals("flames")) {
+    else if (strat.equals("FLAMES")) {
       compatibilityStrategy = new FlamesCalculator();
     }
 	}
