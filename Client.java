@@ -14,10 +14,10 @@ public class Client {
 			Connection connection = new Connection(s);
 			System.out.println("C: Connected.");
 
-      acceptAndValidateNames();
+      String names = acceptAndValidateNames();
 
       // Send names to server
-      if (!connection.sendMessage(msg)) {
+      if (!connection.sendMessage(names)) {
         System.out.println(ERROR_MESSAGE);
       }
       String response = connection.getMessage();
@@ -29,18 +29,21 @@ public class Client {
       System.out.println("S: " + response);
 		}
 		catch (Exception e) {
-			System.out.println(ERROR_MESSAGE);
+      e.printStackTrace();
+			//System.out.println(ERROR_MESSAGE);
 		}
 		
 	}
 
   private static String acceptAndValidateNames() {
-    String names;
-    InputValidator checker;
+    String names = "";
+    InputValidator checker = new InputValidator();
     boolean valid = false;
 
+    Scanner scan = new Scanner(System.in);
+
     while (!valid) {
-      names = promptForNames();
+      names = promptForNames(scan);
       valid = checker.isValid(names);
       if (valid) {
         System.out.println("Input accepted.");
@@ -50,15 +53,16 @@ public class Client {
       }
     }
 
-  }
-
-	private static String promptForNames() {
-		System.out.print("Enter names (<name1>,<name2>): ");
-
-    Scanner scan = new Scanner(System.in);
-    String inputNames = scan.nextLine();
     scan.close();
 
-		return inputNames;
+    return names;
+  }
+
+	private static String promptForNames(Scanner scan) {
+		System.out.print("Enter names (<name1>,<name2>): ");
+
+    String names = scan.nextLine();
+
+		return names;
 	}
 }
