@@ -1,11 +1,9 @@
 public class InputValidator {
-	String inputString;
 	
-	public InputValidator (String inputString) {
-		this.inputString = inputString;
+	public InputValidator () {
 	}
 	
-	public boolean check() {
+	public boolean isValid(String inputString) {
 		boolean validity = false;
 		CheckNumberOfOccurences occurence = new CheckNumberOfOccurences(inputString, ",");
 		int resultingOccurence = occurence.countOccurences();
