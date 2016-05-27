@@ -28,10 +28,11 @@ public class ServerRunnable implements Runnable {
     boolean good = true;
 		try {
 			Connection connection = new Connection(s);
-			System.out.println("S: Somebody connected!");
+		  InetAddress ip = connection.getIp();
+      
+			System.out.println("S: " + ip + " connected!");
       
       String names = connection.getMessage();
-		  InetAddress ip = connection.getIp();
 			System.out.println(ip  + "> " + names);
         
 		  String response = getResponse(names);
