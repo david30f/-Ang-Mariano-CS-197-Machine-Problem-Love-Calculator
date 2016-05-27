@@ -47,7 +47,8 @@ public class ServerRunnable implements Runnable {
 	// Response logic
 	//***************************************
   private String getResponse(String names) {
-    String[] namesArray = names.split(",");
+    String preparedNames = names.replaceAll("\\s","").toLowerCase();
+    String[] namesArray = preparedNames.split(",");
     return compatibilityStrategy.compute(namesArray[0], namesArray[1]);
   }
 }
