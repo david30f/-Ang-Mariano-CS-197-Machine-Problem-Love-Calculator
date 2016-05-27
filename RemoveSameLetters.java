@@ -18,10 +18,8 @@ public class RemoveSameLetters {
 			}
 		}
 
-		System.out.println(loopOnThisString + " & " + checkForSimilaritiesFromThisString); //REMOVE
 		String loopOnThisStringRemovedSameLetters = loopOnThisString.replaceAll("!", "");
 		String checkForSimilaritiesFromThisStringRemovedSameLetters = checkForSimilaritiesFromThisString.replaceAll("!", "");
-		System.out.println(loopOnThisStringRemovedSameLetters + " & " + checkForSimilaritiesFromThisStringRemovedSameLetters); //REMOVE
 		return new String[] {loopOnThisStringRemovedSameLetters, checkForSimilaritiesFromThisStringRemovedSameLetters};
 	}
 }

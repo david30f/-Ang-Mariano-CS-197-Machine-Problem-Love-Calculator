@@ -7,7 +7,7 @@
 public class FlamesCalculator implements LoveComputer {
 	String name1;
 	String name2;
-	final String [] flamesRelationship = {"S: Sibling", "F: Friendship", "L: Love", "A: Affection", "M: Marriage", "E: Enemy"};
+	final String [] flamesRelationship = {"S = Sibling", "F = Friendship", "L = Love", "A = Affection", "M = Marriage", "E = Enemy"};
 	
 	public FlamesCalculator (String name1, String name2) {
 		this.name1 = name1;
